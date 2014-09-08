@@ -18,8 +18,34 @@
 ## Web Application Frameworks in Python
 
 ##### MVC Based Web Application Frameworks
-  ######[Django](https://www.djangoproject.com/)
+######[Django](https://www.djangoproject.com/)
 
-  ###### [Pyramid Framework](http://www.pylonsproject.org/projects/pyramid/about)
+###### [Pyramid Framework](http://www.pylonsproject.org/projects/pyramid/about)
 
 
+
+
+### Install Python,Django,Pyramid Framework on Ubuntu
+```python
+	sudo apt-get update
+	sudo apt-get install python3-dev python3-setuptools
+	sudo easy_install virtualenv
+
+
+  #for pyramid framwork
+  mkdir pyramid_sites
+  cd pyramid_sites
+  # To create virutal Environment,raries without affecting our system's tools.
+  virtualenv --no-site-packages env  
+  source env/bin/activate   # To Activate virtual Environment
+
+
+```
+
+``` Pyramid Commands
+   #Some Commands for building up a pyramid project
+   pcreate -l  # displays all commands
+   pcreate -s starter starter_first_project  # to create a sample project
+   pcreate -s alchemy example_app_with_alchemy  # Sql_alchemy is a ORM for Pyramid (Object Relational Mapper)
+	
+```
