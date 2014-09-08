@@ -46,6 +46,13 @@
    #Some Commands for building up a pyramid project
    pcreate -l  # displays all commands
    pcreate -s starter starter_first_project  # to create a sample project
-   pcreate -s alchemy example_app_with_alchemy  # Sql_alchemy is a ORM for Pyramid (Object Relational Mapper)
-	
+   pcreate -s alchemy example_app_with_alchemy  # Sql_alchemy is a ORM for Pyramid (Object Relational Mapper)   
+```
+
+``` Create a sample starter project
+		pcreate -s starter mywebsite
+		cd mywebsite
+		python setup.py develop
+		#to Run server -- Defaulty run on 6543 we can change port in out environment
+		pserve development.ini  
 ```
