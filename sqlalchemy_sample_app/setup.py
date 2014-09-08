@@ -8,18 +8,20 @@ with open(os.path.join(here, 'README.txt')) as f:
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
-#sample single line commenting code
 requires = [
     'pyramid',
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
+    'pyramid_tm',
+    'SQLAlchemy',
+    'transaction',
+    'zope.sqlalchemy',
     'waitress',
     ]
-    
 
-setup(name='pyramid_starter_sample_project',
+setup(name='sqlalchemy_sample_app',
       version='0.0',
-      description='pyramid_starter_sample_project',
+      description='sqlalchemy_sample_app',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -30,15 +32,16 @@ setup(name='pyramid_starter_sample_project',
       author='',
       author_email='',
       url='',
-      keywords='web pyramid pylons',
+      keywords='web wsgi bfg pylons pyramid',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
+      test_suite='sqlalchemy_sample_app',
       install_requires=requires,
-      tests_require=requires,
-      test_suite="pyramid_starter_sample_project",
       entry_points="""\
       [paste.app_factory]
-      main = pyramid_starter_sample_project:main
+      main = sqlalchemy_sample_app:main
+      [console_scripts]
+      initialize_sqlalchemy_sample_app_db = sqlalchemy_sample_app.scripts.initializedb:main
       """,
       )

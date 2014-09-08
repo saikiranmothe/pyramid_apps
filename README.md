@@ -38,8 +38,6 @@
   # To create virutal Environment,raries without affecting our system's tools.
   virtualenv --no-site-packages env  
   source env/bin/activate   # To Activate virtual Environment
-
-
 ```
 
 ``` Pyramid Commands
@@ -55,4 +53,10 @@
 		python setup.py develop
 		#to Run server -- Defaulty run on 6543 we can change port in out environment
 		pserve development.ini  
+```
+
+
+### Pyramid with MongoDB (Blog APP with Pyramid + Mongo)
+```ruby
+  http://www.brettdangerfield.com/post/creating_a_blog_with_pyramid_mongdb_bootstrap/
 ```
